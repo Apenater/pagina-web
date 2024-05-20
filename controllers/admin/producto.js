@@ -21,8 +21,7 @@ const SAVE_FORM = document.getElementById('saveForm'),
     CANTIDAD_PRODUCTO = document.getElementById('cantidadProducto'),
     CATEGORIA_PRODUCTO = document.getElementById('categoriaProducto'),
     ADMINISTRACION_PRODUCTO = document.getElementById('administradorProducto'),
-    MARCA_PRODUCTO = document.getElementById('marcaProducto')
-    ;
+    MARCA_PRODUCTO = document.getElementById('marcaProducto');
 
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {

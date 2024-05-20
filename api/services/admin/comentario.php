@@ -78,10 +78,10 @@ if (isset($_GET['action'])) {
             // Caso para poder cambiar el estado del comentario
             case 'changeState':
                 if (
-                    !$cliente->setId($_POST['idComentario'])
+                    !$comentario->setId($_POST['idComentario'])
                 ) {
-                    $result['error'] = $cliente->getDataError();
-                } elseif ($cliente->changeState()) {
+                    $result['error'] = $comentario->getDataError();
+                } elseif ($comentario->changeState()) {
                     $result['status'] = 1;
                     $result['message'] = 'Estado del comentario cambiado correctamente';
                 } else {

@@ -10,18 +10,18 @@ class ComentarioHandler
     *   Declaración de atributos para el manejo de datos.
     */
     protected $id = null;
-    protected $comentario = null;;
+    protected $comentario = null;
     protected $estado = null;
     protected $producto = null;
     protected $cliente = null;
 
-     /*
+    /*
     *   Métodos para realizar las operaciones SCRUD (search, create, read, update, and delete).
     */
     public function searchRows()
     {
         $value = '%' . Validator::getSearchValue() . '%';
-        $sql = 'SELECT c.id_comentario, c.comentario, p.nombre_producto, cl.nombre_cliente, c.estado_comentario
+        $sql = 'SELECT c.id_comentario, c.comentario, p.nombre_producto AS nombre_producto, cl.nombre_cliente AS nombre_cliente, c.estado_comentario
         FROM tb_comentarios c
         INNER JOIN tb_productos p ON c.id_producto = p.id_producto
         INNER JOIN tb_clientes cl ON c.id_cliente = cl.id_cliente
@@ -36,20 +36,20 @@ class ComentarioHandler
     {
         $sql = 'INSERT INTO tb_comentarios (comentario, id_producto, id_cliente, estado_comentario)
         VALUES (?, ?, ?, ?);';
-        $params = array($this->comentario, $this->producto, $this->cliente , $this->estado );
+        $params = array($this->comentario, $this->producto, $this->cliente, $this->estado);
         return Database::executeRow($sql, $params);
     }
 
     public function readAll()
     {
-        $sql = 'SELECT c.id_comentario, c.comentario, p.nombre_producto, cl.nombre_cliente, c.estado_comentario
+        $sql = 'SELECT c.id_comentario, c.comentario,  p.nombre_producto AS nombre_producto, cl.nombre_cliente AS nombre_cliente, c.estado_comentario
                 FROM tb_comentarios c
                 INNER JOIN tb_productos p ON c.id_producto = p.id_producto
                 INNER JOIN tb_clientes cl ON c.id_cliente = cl.id_cliente
                 ORDER BY c.comentario';
         return Database::getRows($sql);
     }
-    
+
     public function readOne()
     {
         $sql = 'SELECT *
@@ -83,6 +83,4 @@ class ComentarioHandler
         $params = array($this->id);
         return Database::executeRow($sql, $params);
     }
-
 }
-  

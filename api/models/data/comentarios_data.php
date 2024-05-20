@@ -9,27 +9,27 @@ require_once('../../models/handler/comentarios_handler.php');
 class ComentarioData extends ComentarioHandler
 {
 
-      /*
+    /*
      *  Atributos adicionales.
      */
     private $data_error = null;
 
-     /*
+    /*
      *   Métodos para validar y establecer los datos.
      */
 
-     public function setId($value)
-     {
-         if (Validator::validateNaturalNumber($value)) {
-             $this->id = $value;
-             return true;
-         } else {
-             $this->data_error = 'El identificador del producto es incorrecto';
-             return false;
-         }
-     }
+    public function setId($value)
+    {
+        if (Validator::validateNaturalNumber($value)) {
+            $this->id = $value;
+            return true;
+        } else {
+            $this->data_error = 'El identificador del producto es incorrecto';
+            return false;
+        }
+    }
 
-     public function setComentario($value, $min = 2, $max = 300)
+    public function setComentario($value, $min = 2, $max = 300)
     {
         if (!Validator::validateString($value)) {
             $this->data_error = 'El comentario contiene caracteres prohibidos';
@@ -76,7 +76,7 @@ class ComentarioData extends ComentarioHandler
         }
     }
 
-      /*
+    /*
      *  Métodos para obtener el valor de los atributos adicionales.
      */
     public function getDataError()
