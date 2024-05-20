@@ -5,6 +5,7 @@ const ADMIN_API = 'services/admin/administrador.php';
 const MARCA_API = 'services/admin/marca.php';
 const PEDIDOS_aPI = 'services/admin/pedidos.php';
 
+
 // Constante para establecer el formulario de buscar.
 const SEARCH_FORM = document.getElementById('searchForm');
 // Constantes para establecer el contenido de la tabla.
