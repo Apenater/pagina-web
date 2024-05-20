@@ -24,117 +24,13 @@
         <h2 class="usuusu">Pedidos</h2>
         <br>
         <div class="container">
-            <div class="row">
+            <div class="row" id="tarjetas">
+
+                
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Apartado de tarjetas
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-                <!--Primera tarjeta-->
-                <div class="card mb-3 mx-3 mt-5" style="max-width: 400px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../../resources/img/iconos/usuario.png" class="img-fluid rounded-start mt-5"
-                                alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Ricardo Melara</b></h5>
-                                <br>
-                                <p class="card-text">-Producto1</p>
-                                <p class="card-text">-Producto2</p>
-                                <p class="card-text">-Producto3</p>
-                                <p class="card-text">...</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 8 mins ago</small>
-                                <p class="text-danger"><b>Pendiente</b></p>
-                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                                    data-bs-target="#masInfo">Información</button>
-                                <div onclick="alertMine('entregado')" class="btn btn-outline-success">
-                                    <img src="../../resources/img/iconos/check.png" class="imagen-pedido">
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Segunda tarjeta-->
-                <div class="card mb-3 mx-3 mt-5" style="max-width: 400px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../../resources/img/iconos/usuario.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Katy Elizabeth</b></h5>
-                                <br>
-                                <p class="card-text">-Producto1</p>
-                                <p class="card-text">-Producto2</p>
-                                <p class="card-text">-Producto3</p>
-                                <p class="card-text">...</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
-                                <p class="text-success"><b>Entregado</b></p>
-                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                                    data-bs-target="#masInfo">Información</button>
-                                <div onclick="alertMine('pendiente')" class="btn btn-outline-success">
-                                    <img src="../../resources/img/iconos/check.png" class="imagen-pedido">
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Tercera tarjeta-->
-                <div class="card mb-3 mx-3 mt-5" style="max-width: 400px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../../resources/img/iconos/usuario.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Carlos Francisco</b></h5>
-                                <p class="card-text">-Producto1</p>
-                                <p class="card-text">-Producto2</p>
-                                <p class="card-text">-Producto3</p>
-                                <p class="card-text">...</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 8 mins ago</small>
-                                <p class="text-danger"><b>Pendiente</b></p>
-                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                                    data-bs-target="#masInfo">Informacion</button>
-                                <div onclick="alertMine('entregado')" class="btn btn-outline-success">
-                                    <img src="../../resources/img/iconos/check.png" class="imagen-pedido">
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Cuarta tarjeta-->
-                <div class="card mb-3 mx-3 mt-5" style="max-width: 400px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="../../resources/img/iconos/usuario.png" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Jeremy Mortero</b></h5>
-                                <p class="card-text">-Producto1</p>
-                                <p class="card-text">-Producto2</p>
-                                <p class="card-text">-Producto3</p>
-                                <p class="card-text">...</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 15 dias ago</small>
-                                </p>
-                                <p class="text-success"><b>Entregado</b></p>
-                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                                    data-bs-target="#masInfo">Informacion</button>
-                                <div onclick="alertMine('pendiente')" class="btn btn-outline-success">
-                                    <img src="../../resources/img/iconos/check.png" class="imagen-pedido">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Tabla de empleados activos -->
             <h2 class="text-center">Trabajadores en linea</h2>
@@ -329,6 +225,8 @@
 
 <!--Enlace para elementos del bootstrap-->
 <script src="../../resources/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../controllers/admin/pedidos.js"></script>
 
 
 </html>
